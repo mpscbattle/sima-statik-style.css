@@ -1,0 +1,266 @@
+body { 
+    background-color: #f0f0f0; 
+    margin: 0; 
+    padding: 0; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    font-family: 'Arial', sans-serif; 
+}
+
+.main-container { 
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 3px; 
+}
+
+.initial-start-screen { 
+    text-align: center; 
+    width: 100%; 
+    max-width: 400px; 
+    background: #ffffff; 
+    padding: 40px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    margin-top: 50px; 
+}
+
+.center-start-btn { 
+    background-color: #204060; 
+    color: white; 
+    padding: 10px 29px; 
+    font-size: 20px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+}
+
+.quiz-box, .report-card, .analysis-card { 
+    max-width: 100%; 
+    width: 100%; 
+    margin: 10px auto; 
+    background: #ffffff; 
+    padding: 10px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2); 
+    display: none; 
+}
+
+.quiz-header-main { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-bottom: 10px; 
+    border-bottom: 1px solid #eee; 
+    margin-bottom: 10px; 
+}
+
+.timer { 
+    background:#404040; 
+    color:white; 
+    padding:2px 6px; 
+    border-radius:5px; 
+    font-weight:bold; 
+    font-size:15px; 
+    min-width:80px; 
+    height:30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.quiz-progress { 
+    font-size: 15px; 
+    font-weight: bold; 
+    color: #008080; 
+}
+
+.progress-bar-container { 
+    width: 100%; 
+    height: 18px; 
+    background-color: #fff7e6; 
+    border-radius: 2px; 
+    margin-bottom: 15px; 
+    overflow: hidden; 
+}
+
+.progress-bar { 
+    height: 100%; 
+    width: 0%; 
+    background-color: #ff6600; 
+    transition: width 0.4s ease; 
+}
+
+/* मुख्य प्रश्नांसाठी Circle लुक */
+.question-number-circle { 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    background-color: #004466; 
+    color: white; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    font-size:14px; 
+}
+
+/* ॲनालिसिससाठी लेबल लुक */
+.q-label-analysis { 
+    font-size: 15px; 
+    color: #004466; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    display: block; 
+}    
+
+.question { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+
+.option { 
+    font-size: 16px; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: 1px solid #cccccc; 
+    border-radius: 4px; 
+    background-color: #f9f9f9; 
+    cursor: pointer; 
+}
+
+.option.selected { background-color: #ffcc66 !important; border-color: #ff6600; }
+.option.correct { background-color: #00cc66 !important; color: white; }
+.option.wrong { background-color: #ff3333 !important; color: white; }  
+
+.nav-buttons { display: flex; justify-content: space-between; margin-top: 20px; gap: 10px; }
+
+.btn-nav { 
+    flex: 1; 
+    padding: 12px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #404040; 
+    color: white; 
+    cursor: pointer; 
+}
+
+.btn-nav:disabled { background-color: #cccccc !important; color: #666666 !important; cursor: not-allowed; }
+
+.btn-submit-inline { 
+    flex: 1; 
+    padding: 12px; 
+    background-color: #204060; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.report-grid { display: flex; flex-direction: column; gap: 5px; margin: 20px 0; }
+
+.report-item { 
+    background: #f2f2f2; 
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    border-radius: 4px; 
+    font-weight: bold; 
+    font-size:15px; 
+}
+
+.score-box { 
+    background-color: #e6e6ff; 
+    padding: 15px; 
+    text-align: center; 
+    border-radius: 5px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    margin: 10px 0; 
+}
+
+.btn-primary { 
+    background-color: #204060; 
+    color: white; 
+    padding: 12px; 
+    width: 100%; 
+    border: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    font-size:15px; 
+    text-align: center; 
+}
+
+.btn-warning {
+    background-color: #ff9900; /* संतरी रंग */
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-warning:hover {
+    background-color: #e68a00;
+}
+
+
+.analysis-box { 
+    border: 1px solid #ddd; 
+    margin-bottom: 15px; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size:16px; 
+}
+
+.analysis-card { 
+    max-width: 100%; 
+    width: 100%; 
+    margin-top: 20px; /* रिपोर्ट कार्डपासून खाली २० पिक्सेल अंतर */
+    background: #ffffff; 
+    padding: 15px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2); 
+    display: none; 
+}
+
+/* व्ह्यू ॲनालिसिस बटण दाबल्यानंतर ते पुन्हा दिसू नये म्हणून तुम्ही ते लपवू शकता (Optional) */
+.view-analysis-btn-clicked {
+    display: none;
+}
+
+.question img, .explanation-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 10px 0;
+}
+
+
+.explanation-box { 
+    background-color: #fff3e6; 
+    padding: 10px; 
+    margin:10px 0; 
+    border-radius: 4px; 
+    font-size:16px; 
+    color: #000; 
+}
+
+.feedback { padding: 8px; text-align: center; font-weight: bold; margin-top: 10px; border-radius: 4px; }
+.correct-feedback { background-color: #79d2a6; color: white; }
+.wrong-feedback { background-color: #ff9999; color: white; }
+.not-attempted-feedback { background-color: #b3b3cc; color: white; }
+
+.btn-link { text-decoration: none; display: block; width: 100%; }

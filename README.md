@@ -1,1 +1,0 @@
-# sima-statik-style.css
