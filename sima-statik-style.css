@@ -196,24 +196,49 @@ body {
     text-align: center; 
 }
 
-.btn-warning {
-    background-color: #ff9900; /* संतरी रंग */
+/* --- Mid-Way Submit Button Style --- */
+.btn-mid-submit {
+    background-color: #ff9900; /* ऑरेंज रंग */
     color: white;
-    padding: 12px;
-    font-size: 15px;
+    padding: 12px 20px;
+    font-size: 16px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    display: block;
-    margin: 10px auto;
-    width: 100%;
+    width: 100%; /* पूरी चौड़ाई */
+    display: block; 
+    margin-top: 15px; /* Previous-Next बटन से दूरी */
+    transition: background 0.3s ease;
     text-align: center;
 }
 
-.btn-warning:hover {
-    background-color: #e68a00;
+.btn-mid-submit:hover {
+    background-color: #e68a00; /* थोड़ा गहरा ऑरेंज */
 }
+
+/* नेविगेशन बटन के बीच की दूरी के लिए */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-nav, .btn-submit-inline {
+    flex: 1;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-nav { background: #204060; color: white; }
+.btn-submit-inline { background: #00cc66; color: white; }
+
+
+
 
 
 .analysis-box { 
